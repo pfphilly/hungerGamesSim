@@ -1,0 +1,2 @@
+take input until user terminates
+stores the values in a multidimensional array
