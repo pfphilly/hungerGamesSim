@@ -1,2 +1,21 @@
 take input until user terminates
 stores the values in a multidimensional array
+
+
+1: Smart 
+2: Strong
+3: Stubborn
+4: Stamina 
+5: Resourceful 
+6: Trained
+7: Clingy
+8: Weak
+9: Stupid
+10: Unaware
+11: Aware 
+12: Bad Eyesight
+13: Good Eyesight
+14: Good Liar
+15: Persuasive
+16: Bad Liar
+17: Disliked

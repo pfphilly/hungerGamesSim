@@ -1,2 +1,3 @@
-peter, 5, 8, 10, 9,, 
-jonathan, 4, 8, 10, 8,, 
+name, strength, friendlyness, smarts, sponsor_popularity, extra_trait,,
+peter, 5, 8, 10, 9, 5,, 
+jonathan, 4, 8, 10, 8, 1,, 
