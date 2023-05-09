@@ -19,3 +19,74 @@ stores the values in a multidimensional array
 15: Persuasive
 16: Bad Liar
 17: Disliked
+18: egotistical 
+19: paranoid 
+
+
+
+event ideas:
+    on each day:
+        form alliance
+        anger gamemakers
+        fight
+        ambush 
+        raid 
+        forage
+        eat 
+        donation 
+        injury
+        hide
+        travel
+        sleep
+
+
+    on each night
+        ambush
+        fight
+        sleep 
+        sleep in shifts
+        sleep with ally
+        betray
+        steal
+        eat 
+        forage 
+        make alliance 
+        break alliance 
+        hide 
+        raid 
+        anger gamemakers 
+
+
+weapons:
+    sword
+    bow/arrows
+    spear 
+    net 
+    sling 
+    dart
+    knife 
+    hatchet
+    battle axe
+    handgun
+
+items:
+    body armor
+    sheild
+    medkit
+    small rations
+    large rations
+    backback 
+    life vest
+    ammo 
+    arrows
+    tarp
+    heating device
+    matches
+    lighter
+    torch 
+
+sponsor gifts:
+    hot meal 
+    medicine
+    water
+    spile 
