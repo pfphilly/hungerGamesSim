@@ -107,7 +107,9 @@ players = {
     'izzy' : {'name' : 'izzy', 'strength' : 7, 'friendlyness' : 8, 'smarts' : 8, 'sponsor_popularity' : 9, 'special_trait' : 4},
     'luca' : {'name' : 'luca', 'strength' : 8, 'friendlyness' : 6, 'smarts' : 10, 'sponsor_popularity' : 1, 'special_trait' : 18},
     'alden' : {'name' : 'alden', 'strength' : 10, 'friendlyness' : 6, 'smarts' : 9, 'sponsor_popularity' : 8, 'special_trait' : 19 },
-    'james H' : {'name' : 'james H', 'strength' : 6, 'friendlyness' : 10, 'smarts' : 3, 'sponsor_popularity' : 5, 'special_trait' : 18}
+    'james H' : {'name' : 'james H', 'strength' : 6, 'friendlyness' : 10, 'smarts' : 3, 'sponsor_popularity' : 5, 'special_trait' : 18},
+    'james JB' : {'name' : 'james JB', 'strength' : 9, 'friendlyness' : 8, 'smarts' : 6, 'sponsor_popularity' : 8, 'special_trait' : 6},
+    'julien' : {'name' : 'julien', 'strength' : 1, 'friendlyness' : 3, 'smarts' : 1, 'sponsor_popularity' : 1, 'special_trait' : 18}
 }
 print("LET THE GAMES BEGIN")
 
@@ -135,14 +137,23 @@ for player in bloodbathBattle:
     if players.get(player).get('strength') > 9:
         cornicopiaWeapons[0].owner = player
         print(f"{player} grabs a {cornicopiaWeapons[0].name}")
-        numpy.delete(cornicopiaWeapons, 0)
+        cornicopiaWeapons = numpy.delete(cornicopiaWeapons, 0)
     if players.get(player).get('strength') > 7:
         cornicopiaWeapons[0].owner = player
         print(f"{player} grabs a {cornicopiaWeapons[0].name}")
-        numpy.delete(cornicopiaWeapons, 0)
+        cornicopiaWeapons = numpy.delete(cornicopiaWeapons, 0)
     if players.get(player).get('strength') < 7 and players.get(player).get('strength') > 3:
         cornicopiaWeapons[0].owner = player
         print(f"{player} grabs a {cornicopiaWeapons[0].name} this should be interesting...")
-        numpy.delete(cornicopiaWeapons, 0)
+        cornicopiaWeapons = numpy.delete(cornicopiaWeapons, 0)
     if players.get(player).get('strength') < 3:
-        print("to be continued")
+        bloodbathFatalitieLocation = numpy.where(player)
+        bloodbathFatalitieString = str(bloodbathFatalitieLocation)
+        bloodbathFatalitieCleaned1 = bloodbathFatalitieString.replace("(array([", "")
+        bloodbathFatalitieCleaned2 = bloodbathFatalitieCleaned1.replace("]),)", "")
+        print(bloodbathFatalitieCleaned2)
+        bloodbathFatalitie = int(bloodbathFatalitieCleaned2)
+        if bloodbathFatalitie < len(bloodbathBattle) - 1:
+            print(f"{player} was killed by {bloodbathBattle[bloodbathFatalitie + 1]}")
+        else:
+            print(f"{player} was killed by {bloodbathBattle[bloodbathFatalitie + 1]}")
