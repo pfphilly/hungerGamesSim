@@ -151,9 +151,14 @@ for player in bloodbathBattle:
         bloodbathFatalitieString = str(bloodbathFatalitieLocation)
         bloodbathFatalitieCleaned1 = bloodbathFatalitieString.replace("(array([", "")
         bloodbathFatalitieCleaned2 = bloodbathFatalitieCleaned1.replace("]),)", "")
-        print(bloodbathFatalitieCleaned2)
+        #print(bloodbathFatalitieCleaned2)
         bloodbathFatalitie = int(bloodbathFatalitieCleaned2)
         if bloodbathFatalitie < len(bloodbathBattle) - 1:
-            print(f"{player} was killed by {bloodbathBattle[bloodbathFatalitie + 1]}")
+            for weaponTool in cornicopiaWeaponsCatalog:
+                if weaponTool.owner == bloodbathBattle[bloodbathFatalitie + 1]:
+                    how = weaponTool.name
+                else:
+                    how = "with their fists"
+            print(f"{player} was killed by {bloodbathBattle[bloodbathFatalitie + 1]} with {how}")
         else:
-            print(f"{player} was killed by {bloodbathBattle[bloodbathFatalitie + 1]}")
+            print(f"{player} was killed by {bloodbathBattle[bloodbathFatalitie - 2]}")
