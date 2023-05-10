@@ -67,17 +67,17 @@ weapons:
     knife 
     hatchet
     battle axe
-    handgun
+
 
 items:
-    body armor
+
     sheild
     medkit
     small rations
     large rations
     backback 
     life vest
-    ammo 
+ 
     arrows
     tarp
     heating device
@@ -90,3 +90,8 @@ sponsor gifts:
     medicine
     water
     spile 
+
+
+special effect of weapons
+1: immobilize
+2: goliath's weakness

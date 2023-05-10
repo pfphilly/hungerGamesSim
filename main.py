@@ -1,6 +1,81 @@
 import csv
 import random
 import numpy
+#make classes for all items
+
+class sword:
+    #1-10
+    attack = 7
+    defense = 5
+    #1-10
+    tradeValue = 7
+    name = "sword"
+    actionType = "slashed"
+
+class bow_and_arrows:
+    #1-10
+    attack = 8
+    defense = 1
+    #1-10
+    tradeValue = 8
+    name = "bow and arrows"
+    actionType = "shot"
+
+class spear:
+    attack = 7
+    defense = 1
+    tradeValue = 5
+    name = "spear"
+    actionType = "impaled"
+
+class net:
+    attack = 3
+    defense = 3
+    tradeValue = 2
+    name = "net"
+    actionType = "caught"
+    specialEffect = 1
+
+class sling:
+    attack = 5
+    defense = 0
+    tradeValue = 1
+    name = "sling"
+    actionType = "shot"
+    specialEffect = 2
+
+class dart:
+    attack = 4
+    defense = 0
+    tradeValue = 0
+    name = "blow darts"
+    actionType = "shot"
+
+class knife:
+    attack = 7
+    defense = 2
+    tradeValue = 3
+    name = "knife"
+    actionType = "stabbed"
+
+class hatchet:
+    attack = 8
+    defense = 3
+    tradeValue = 5
+    name = "hatchet"
+    actionType = "mauled"
+
+hatchet1 = hatchet()
+hatchet2 = hatchet()
+knife1 = knife()
+knife2 = knife()
+knife3 = knife()
+knife4 = knife()
+knife5 = knife()
+knife6 = knife()
+knife7 = knife()
+knife8 = knife()
+
 print("THE HUNGER GAMES")
 
 #print("enter the values below 1 to 10")
@@ -13,7 +88,7 @@ players = []
 #    reader = csv.DictReader(csvfile)
 #    for row in reader:
 #        players.append(row)
-
+#dictionary for all players
 players = {
     'peter' : {'name' : 'peter', 'strength' : 5, 'friendlyness' : 8, 'smarts' : 10, 'sponsor_popularity' : 9, 'special_trait' : 5},
     'jonathan' : {'name' : 'jonathan', 'strength' : 4, 'friendlyness' : 8, 'smarts' : 10, 'sponsor_popularity' : 8, 'special_trait' : 1},
@@ -35,7 +110,7 @@ for player in players:
 
 print("BLOODBATH:\n")
 bloodbath = []
-cornicopiaWeapons = numpy.array['axe', 'axe', 'axe', 'hatchet', 'hatchet', 'knife', 'knife', 'knife', 'knife', 'knife', 'knife', 'knife', 'knife', 'bowArrows', 'bowArrows', 'handgun', 'spear', 'spear', 'darts', 'darts', 'battle axe', 'sling', 'sling', 'sword', 'sword', 'sword']
+cornicopiaWeapons = numpy.array['hatchet', 'hatchet', 'knife', 'knife', 'knife', 'knife', 'knife', 'knife', 'knife', 'knife', 'bowArrows', 'bowArrows', 'handgun', 'spear', 'spear', 'darts', 'darts', 'battle axe', 'sling', 'sling', 'sword', 'sword', 'sword']
 cornicopiaItems = numpy.array['medkit', 'medkit', 'medkit', 'largeRation', 'largeRation', 'smallRation', 'smallRation', 'smallRation', 'smallRation', 'smallRation', 'tarp', 'tarp', 'tarp', 'tarp', 'tarp', 'tarp', 'backpackLarge', 'backpackSmall', 'backpackSmall']
 for player in players:
     if players.get(player).get('smarts') < 6 or players.get(player).get('strength') > 7:
