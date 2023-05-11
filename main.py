@@ -2,9 +2,7 @@ import csv
 import random
 import numpy
 #make classes for all items
-class weapon:
-    owner = ""
-class sword(weapon):
+class sword:
     #1-10
     attack = 7
     defense = 5
@@ -12,8 +10,9 @@ class sword(weapon):
     tradeValue = 7
     name = "sword"
     actionType = "slashed"
+    owner = ""
 
-class bow_and_arrows(weapon):
+class bow_and_arrows:
     #1-10
     attack = 8
     defense = 1
@@ -21,50 +20,57 @@ class bow_and_arrows(weapon):
     tradeValue = 8
     name = "bow and arrows"
     actionType = "shot"
+    owner = ""
 
-class spear(weapon):
+class spear:
     attack = 7
     defense = 1
     tradeValue = 5
     name = "spear"
     actionType = "impaled"
+    owner = ""
 
-class net(weapon):
+class net:
     attack = 3
     defense = 3
     tradeValue = 2
     name = "net"
     actionType = "caught"
     specialEffect = 1
+    owner = ""
 
-class sling(weapon):
+class sling:
     attack = 5
     defense = 0
     tradeValue = 1
     name = "sling"
     actionType = "shot"
     specialEffect = 2
+    owner = ""
 
-class dart(weapon):
+class dart:
     attack = 4
     defense = 0
     tradeValue = 0
     name = "blow darts"
     actionType = "shot"
+    owner = ""
 
-class knife(weapon):
+class knife:
     attack = 7
     defense = 2
     tradeValue = 3
     name = "knife"
     actionType = "stabbed"
+    owner = ""
 
-class hatchet(weapon):
+class hatchet:
     attack = 8
     defense = 3
     tradeValue = 5
     name = "hatchet"
     actionType = "mauled"
+    owner = ""
 
 hatchet1 = hatchet()
 hatchet2 = hatchet()
@@ -120,7 +126,8 @@ for player in players:
         print(chanceOfDeath)
         if chanceOfDeath == 7:
             print(f"{players.get(player).get('name')} Was a little jumpy and left their circle before the gong and steped on a land mine.")
-
+            del players[player]
+            break
 
 print("BLOODBATH:\n")
 bloodbath = []
@@ -156,9 +163,15 @@ for player in bloodbathBattle:
         if bloodbathFatalitie < len(bloodbathBattle) - 1:
             for weaponTool in cornicopiaWeaponsCatalog:
                 if weaponTool.owner == bloodbathBattle[bloodbathFatalitie + 1]:
+                    print(weaponTool.name)
                     how = weaponTool.name
                 else:
                     how = "with their fists"
             print(f"{player} was killed by {bloodbathBattle[bloodbathFatalitie + 1]} with {how}")
         else:
-            print(f"{player} was killed by {bloodbathBattle[bloodbathFatalitie - 2]}")
+            for weaponTool in cornicopiaWeaponsCatalog:
+                if weaponTool.owner == bloodbathBattle[bloodbathFatalitie + 1]:
+                    how = weaponTool.name
+                else:
+                    how = "with their fists"
+            print(f"{player} was killed by {bloodbathBattle[bloodbathFatalitie - 2]} with {how}")
